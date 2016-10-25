@@ -13,14 +13,15 @@ export default function appController($scope, $http) {
         minDate: new Date(),
         startingDay: 1
     };
-    $scope.open1 = function() {
+    $scope.open1 = function () {
         $scope.popup1.opened = true;
     };
     function disabled(data) {
-       
+
     };
 
     $scope.send = function () {
+
         $http({
             method: 'GET',
             url: 'http://192.168.10.64:3006/postEmail?email=' + $scope.model.email +
@@ -31,6 +32,7 @@ export default function appController($scope, $http) {
             '&returndt=' + $scope.model.dt1 +
             '&mobile=' + $scope.model.mobileNo
         })
+        $scope.model = {};
     };
 
 }
