@@ -1,0 +1,77 @@
+<div class="container">
+    <br>
+    <h1 class="headerText text-center">Fill the Information</h1><br>
+    <ng-form name="nestedForm" style="min-height: 204px;" ui-sref-active="active">
+        <div class="form-group">
+            <div class="row col-form-label ">
+                <div class="col-md-4 col-form-label">
+                    <label class="labelText text-right">First Name:</label></div>
+                <div class="col-md-6 col-form-label">
+                    <input type="text" style="font-weight: bold;color: black" class="form-control" name="fname" required
+                           ng-model="model.fname"/>
+                        <span class=" text-danger" ng-show="nestedForm.fname.$touched && nestedForm.fname.$invalid">
+                            The first name is empty or incorrect format.
+                        </span><br>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="labelText text-right">Last Name:</label></div>
+                <div class="col-md-6">
+                    <input type="text" style="font-weight: bold;color: black" class="form-control" name="lname" required
+                           ng-model="model.lname"/>
+                        <span class="text-center text-danger"
+                              ng-show="nestedForm.lname.$touched && nestedForm.lname.$invalid">
+                            The last name is empty or incorrect format.
+                        </span><br>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="labelText  text-right">Phone No:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" style="font-weight: bold;color: black" placeholder="Contact No" name="mobileNo"
+                           class="form-control"
+                           maxlength="10" required ng-model="model.mobileNo"/>
+                       <span class="text-danger text-center"
+                             ng-show="nestedForm.mobileNo.$touched && nestedForm.mobileNo.$invalid">
+                            The phone number is empty or incorrect format.
+                        </span><br>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="labelText  text-right">Email:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" style="font-weight: bold;color: black" placeholder="abc@gmail.com" name="email"
+                           class="form-control" required
+                           ng-model="model.email"/>
+                        <span class="text-danger text-center"
+                              ng-show="nestedForm.email.$touched && nestedForm.email.$invalid">
+                            The email is empty or incorrect format.
+                        </span><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <br>
+                    <div class="col-sm-7 text-right">
+                        <button type="button" class="btn btn-warning responsive-width" ng-model="singleModel"
+                                ng-click="submitData(model)" href="#" ui-sref="app.travel-data.step-two"
+                                ng-disabled="nestedForm.$invalid" style="font-size: 20px"> Click for Next Step
+                        </button>
+                        <br><br><br> <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-form>
+</div>

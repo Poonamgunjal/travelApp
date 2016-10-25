@@ -1,0 +1,25 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/ui-select/dist/select.min.css";
+@import "../node_modules/ui-select/dist/select.css";
+
+.bg-color {
+  background: #eb9316;
+}
+
+.header-image {
+  background-image: url("../images/tp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.disabled-tab {
+  pointer-events: none;
+}
+
+.background-image {
+  background-image: url("../images/hj.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

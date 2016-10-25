@@ -1,0 +1,19 @@
+<div class="container-fluid" style="background: darkred;">
+    <form name="outerForm">
+        <uib-tabset active="activeForm" justified="false">
+            <uib-tab class="navbar-brand disabled-tab headerText responsive-width" id="tab1" index="0"
+                     heading="Step One"  ui-sref=".step-one"
+                     ui-sref-active="active"></uib-tab>
+            <uib-tab class="navbar-brand disabled-tab headerText responsive-width" id="tab2" index="1"
+                     heading="Step Two"
+                     ui-sref=".step-two" ui-sref-active="active"></uib-tab>
+            <uib-tab class="navbar-brand disabled-tab headerText responsive-width" id="tab3" index="2"
+                     heading="Step Three"
+                     ui-sref=".step-three" ui-sref-active="active"></uib-tab>
+
+        </uib-tabset>
+    </form>
+</div>
+<div class=" text-right">
+    <ui-view></ui-view>
+</div>

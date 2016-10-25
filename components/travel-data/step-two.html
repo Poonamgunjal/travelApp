@@ -1,0 +1,88 @@
+<div class="container">
+    <h1 class="headerText text-center">Fill the Information</h1>
+    <ng-form name="nestedForm">
+        <br><br>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="labelText text-right">Location:</label></div>
+                <div class="col-md-6">
+                    <ui-select style="font-weight: bold;color: black" ng-model="model.selected">
+                        <ui-select-match placeholder="Select a country in the list..." required>{{$select.selected}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="city in countries | filter: $select.search">
+                            <span ng-bind-html="city| highlight: $select.search"></span>
+                        </ui-select-choices>
+
+                    </ui-select>
+                    <span class=" text-danger"
+                          ng-show="nestedForm.$select.selected.$touched && nestedForm.$select.selected.$invalid">
+                           Please Select Country.
+                        </span><br>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="labelText text-right">Departure Date:</label></div>
+                <div class="col-md-6">
+
+                    <p class="input-group">
+                        <input type="text" uib-datepicker-popup class="form-control" ng-model="model.dt" name="ddt"
+                               is-open="main.opened" close-text="Close" datepicker-options="dateOptions"
+                               placeholder="YYYY-DD-MM" ng-required/>
+                    <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="$event.preventDefault();
+                    $event.stopPropagation(); main.opened = true"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+
+                    </p>
+
+
+                    <span class=" text-danger" ng-show="nestedForm.dt.$touched && nestedForm.dt.$invalid">
+                           Please Select valid date.
+                        </span><br>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="labelText text-right">Return Date:</label>
+                </div>
+                <div class="col-md-6">
+
+                    <p class="input-group">
+                        <input type="text" uib-datepicker-popup class="form-control" ng-model="model.dt1" name="ddt1"
+                               is-open="main1.opened" close-text="Close" datepicker-options="dateOptions"
+                               placeholder="YYYY-DD-MM" ng-required/>
+                    <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="$event.preventDefault();
+                    $event.stopPropagation(); main1.opened = true"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+
+                    </p>
+
+                </div>
+                <br>
+                    <span class=" text-danger" ng-show="nestedForm.dt1.$touched && nestedForm.dt1.$invalid">
+                           Please Select valid date.
+                        </span><br> <!---->
+            </div>
+        </div>
+</div>
+<div class="form-group">
+    <div class="row">
+        <br>
+        <div class="col-sm-7 text-right">
+            <button type="button" class="btn btn-warning responsive-width" ng-model="singleModel"
+                    ng-click="submitData(model)" href="#" ui-sref="app.travel-data.step-three"
+                    style="font-size: 20px" ng-disabled="nestedForm.$invalid"> Click for Next Step
+            </button>
+            <br><br><br> <br><br>
+        </div>
+    </div>
+</div>
+</ng-form>
+</div>

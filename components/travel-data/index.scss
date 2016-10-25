@@ -1,0 +1,25 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.disabled-tab {
+  pointer-events: none;
+}
+
+.labelText {
+  font-weight: bold;
+  font-size: 1.5vw;
+  white-space: normal;
+  color: black;
+}
+
+.headerText {
+  font-weight: bold;
+  font-size: 1vw;
+  white-space: normal;
+  color: #800b41;
+
+}
+
+.responsive-width {
+  font-size: 1vw;
+  white-space: normal;
+}

@@ -1,0 +1,28 @@
+<div class="container text-center" style="color: white;font-size: 2vw;white-space: normal;font-weight: bold">
+    <ng-form name="nestedForm">
+        <br><br>
+        <div class="form-group">
+            <div class="row">
+                <span>{{model.fname}}</span>
+                <span>{{model.lname}}</span>
+                <span>({{model.mobileNo}})</span>
+                <span> will depart for {{model.selected}} </span>
+                    <span> on  {{model.dt |date:'dd-MM-yyyy'}}  and return
+                        on {{model.dt1 |date:'dd-MM-yyyy'}}</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <br>
+                <div class="col-sm-7 text-right">
+                    <button type="button" class="btn btn-warning responsive-width" ng-model="singleModel"
+                            href="#" ui-sref="app.travel-data.step-one" style="font-size: 20px" ng-click="send()"> Send
+                        mail
+                    </button>
+                    <br><br><br> <br><br>
+                </div>
+
+            </div>
+        </div>
+    </ng-form>
+</div>
